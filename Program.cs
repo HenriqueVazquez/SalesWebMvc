@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Models;
-using Microsoft.Extensions.DependencyInjection;
-using Pomelo.EntityFrameworkCore.MySql;
 
-var connectionString = "server=localhost;userid=root;password=123456;database=saleswebmvcappdb";
 var builder = WebApplication.CreateBuilder(args);
+
+var configuration = builder.Configuration;
+var connectionString = configuration.GetConnectionString("SalesWebMvcContext");
+
 var serverVersion = new MySqlServerVersion(new Version(8, 0, 31));
 builder.Services.AddDbContext<SalesWebMvcContext>(options =>
 {
