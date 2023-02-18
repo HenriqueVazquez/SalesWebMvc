@@ -1537,13 +1537,11 @@
 }
 
 .rounded-top {
-    border-top-left-radius: 0.25rem !important;
-    border-top-right-radius: 0.25rem !important;
+    border-radius: 0 20px 20px 0 !important;
 }
 
 .rounded-end {
-    border-top-right-radius: 0.25rem !important;
-    border-bottom-right-radius: 0.25rem !important;
+    border-radius: 20px 0 0 20px !important;
 }
 
 .rounded-bottom {

@@ -81,16 +81,10 @@
 }
 
 .rounded-end {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-
-
-
+    border-radius: 20px 0 0 20px !important;
+} 
 .rounded-start {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 0 20px 20px 0 !important;
 }
 
 
@@ -4611,7 +4605,7 @@ textarea.form-control-lg {
 .navbar-light .navbar-text a,
 .navbar-light .navbar-text a:hover,
 .navbar-light .navbar-text a:focus {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .navbar-dark .navbar-brand {
@@ -6579,6 +6573,22 @@ textarea.form-control-lg {
 .placeholder-glow .placeholder {
   -webkit-animation: placeholder-glow 2s ease-in-out infinite;
           animation: placeholder-glow 2s ease-in-out infinite;
+}
+
+.oliva:hover {
+    color: #0bd6c7;
+}
+
+.delete:hover {
+    color: red;
+}
+
+.navmenu {
+    color: #fff;
+}
+
+.navmenu:hover {
+    color: #75ffe1;
 }
 
 @-webkit-keyframes placeholder-glow {

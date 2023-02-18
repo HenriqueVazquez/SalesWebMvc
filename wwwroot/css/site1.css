@@ -18,14 +18,11 @@ body {
 }
 
 .rounded-end {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-radius: 20px 0 0 20px !important;
 }
 
-
 .rounded-start {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 0 20px 20px 0 !important;
 }
 
 .table {
