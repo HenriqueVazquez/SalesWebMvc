@@ -1,7 +1,54 @@
-﻿@{
-    ViewData["Title"] = "Index";
+﻿@model IEnumerable<SalesWebMvc.Models.Seller>
+
+@{
+    ViewData["Title"] = "Seller";
 }
 
-<h2>Sellers</h2>
+<h2>@ViewData["Title"]</h2>
 
-<p>Sellers index page</p>
+<p>
+    <a class="oliva" asp-action="Create">Create New</a>
+</p>
+<table class="table table-striped table-hover w-100">
+    <thead class="bg-gradient mb-3 border-0 mb-2">
+        <tr class="px-6 py-3 bg-primary text-white font-weight-light">
+            <th class="bg-primary rounded-end border-0">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th class="bg-primary border-0">
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th class="bg-primary  border-0">
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </th>
+            <th class="bg-primary border-0">
+                @Html.DisplayNameFor(model => model.BaseSalary)
+            </th>
+            <th class="bg-primary rounded-start border-0"></th>
+        </tr>
+    </thead>
+    <tbody class="w-full mt-3 mt-2">
+        @foreach (var item in Model)
+        {
+                         <tr class="w-100 text-info font-weight-light">
+                             <td class="text-sm rounded-end bg-light border-0">
+                    @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                                <td class="text-sm  bg-light border-0">
+                    @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+                                    <td class="text-sm  bg-light border-0">
+                    @Html.DisplayFor(modelItem => item.BirthDate)
+                                </td>
+                                    <td class="text-sm  bg-light border-0">
+                    @Html.DisplayFor(modelItem => item.BaseSalary)
+                                </td>
+                            <td class="text-sm rounded-start bg-light border-0">
+                                    <a class="oliva" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                    <a class="oliva" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                    <a class="oliva" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </td>
+                        </tr>
+        }
+    </tbody>
+</table>

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Data;
 using SalesWebMvc.Models;
+using SalesWebMvc.Services;
 
 internal class Program
 {
@@ -20,6 +21,7 @@ internal class Program
         // Add services to the container.
         builder.Services.AddControllersWithViews();
         builder.Services.AddScoped<SeedingService>();
+        builder.Services.AddScoped<SellerService>();
 
         var app = builder.Build();      
 
