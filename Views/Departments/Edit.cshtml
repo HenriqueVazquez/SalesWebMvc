@@ -20,21 +20,24 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <div class="d-flex d-inline-flex justify-content-center align-items-center gap-2">
+                 <a class="oliva" asp-action="Index">Back to List</a>                 
                 <button type="submit" class="btn btn-primary mt-2 oliva rounded-pill d-flex justify-content-center align-items-center btpadding">                                               
-                 <div class="d-flex d-inline-flex align-self-center h22">
+                 <div class="d-flex d-inline-flex align-self-center h-22">
                  <i class="gg-chevron-double-down-o"></i>
                  <p class="ms-2 h6">Save</p>
                  </div>
-                </button>
+                </button>        
+                </div>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a class="oliva" asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
