@@ -18,12 +18,18 @@
             @Html.DisplayFor(model => model.Name)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <div class="d-flex d-inline-flex justify-content-center align-items-center gap-2">
-        <a class="oliva" asp-action="Index">Back to List</a>        
-        <input type="submit" value="Delete" class="btn btn-danger delete btn btn-primary mt-2 rounded-pill d-flex justify-content-center align-items-center btpadding" />        
-        </div>
+                 <a class="oliva mt-2" asp-action="Index">Back to List</a>                 
+                <button type="submit" class="btn btn-danger delete btn btn-primary mt-2 rounded-pill d-flex justify-content-center align-items-center btpadding">                                               
+                 <div class="d-flex d-inline-flex align-self-center h-22">
+                <i class="gg-erase"></i>
+                 <p class="ms-2 h6">Delete</p>
+                 </div>
+                </button>        
+                </div>
+
     </form>
 </div>
