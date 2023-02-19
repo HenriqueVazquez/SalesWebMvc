@@ -87,10 +87,17 @@
     border-radius: 0 20px 20px 0 !important;
 }
 
+.button-rouded-test {
+    border-radius: 75px 75px 75px 75px !important;
+}
+
+.h22 {
+    height: 22px;
+}
 
 .table {
     border-collapse: separate;
-    border-spacing: 0;
+    border-spacing: 0px 5px;
 }
 
     .table td,
@@ -8167,8 +8174,8 @@ textarea.form-control-lg {
 }
 
 .rounded-end {
-  border-top-right-radius: 0.25rem !important;
-  border-bottom-right-radius: 0.25rem !important;
+  border-top-right-radius: 0.0rem !important;
+  border-bottom-right-radius: 0.0rem !important;
 }
 
 .rounded-bottom {
@@ -8177,8 +8184,8 @@ textarea.form-control-lg {
 }
 
 .rounded-start {
-  border-bottom-left-radius: 0.25rem !important;
-  border-top-left-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.0rem !important;
+  border-top-left-radius: 0.0rem !important;
 }
 
 .visible {
