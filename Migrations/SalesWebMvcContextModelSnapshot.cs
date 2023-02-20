@@ -5,8 +5,6 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SalesWebMvc.Models;
 
-#nullable disable
-
 namespace SalesWebMvc.Migrations
 {
     [DbContext(typeof(SalesWebMvcContext))]
@@ -16,120 +14,76 @@ namespace SalesWebMvc.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.3")
+                .HasAnnotation("ProductVersion", "2.1.1-rtm-30846")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("SalesWebMvc.Models.Department", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("Name");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("Department");
-                });
+                b.ToTable("Department");
+            });
 
             modelBuilder.Entity("SalesWebMvc.Models.SalesRecord", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd();
 
-                    b.Property<double>("Amount")
-                        .HasColumnType("double");
+                b.Property<double>("Amount");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime(6)");
+                b.Property<DateTime>("Date");
 
-                    b.Property<int>("SellerId")
-                        .HasColumnType("int");
+                b.Property<int?>("SellerId");
 
-                    b.Property<int>("StatusId")
-                        .HasColumnType("int");
+                b.Property<int>("Status");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("SellerId");
+                b.HasIndex("SellerId");
 
-                    b.HasIndex("StatusId");
-
-                    b.ToTable("SalesRecord");
-                });
+                b.ToTable("SalesRecord");
+            });
 
             modelBuilder.Entity("SalesWebMvc.Models.Seller", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd();
 
-                    b.Property<double>("BaseSalary")
-                        .HasColumnType("double");
+                b.Property<double>("BaseSalary");
 
-                    b.Property<DateTime>("BirthDate")
-                        .HasColumnType("datetime(6)");
+                b.Property<DateTime>("BirthDate");
 
-                    b.Property<int>("DeparmentId")
-                        .HasColumnType("int");
+                b.Property<int?>("DepartmentId");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("Email");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("Name");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("DeparmentId");
+                b.HasIndex("DepartmentId");
 
-                    b.ToTable("Seller");
-                });
+                b.ToTable("Seller");
+            });
 
             modelBuilder.Entity("SalesWebMvc.Models.SalesRecord", b =>
-                {
-                    b.HasOne("SalesWebMvc.Models.Seller", "Seller")
-                        .WithMany("Sales")
-                        .HasForeignKey("SellerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SalesWebMvc.Models.SalesRecord", "Status")
-                        .WithMany()
-                        .HasForeignKey("StatusId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Seller");
-
-                    b.Navigation("Status");
-                });
+            {
+                b.HasOne("SalesWebMvc.Models.Seller", "Seller")
+                    .WithMany("Sales")
+                    .HasForeignKey("SellerId");
+            });
 
             modelBuilder.Entity("SalesWebMvc.Models.Seller", b =>
-                {
-                    b.HasOne("SalesWebMvc.Models.Department", "Deparment")
-                        .WithMany("Seller")
-                        .HasForeignKey("DeparmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Deparment");
-                });
-
-            modelBuilder.Entity("SalesWebMvc.Models.Department", b =>
-                {
-                    b.Navigation("Seller");
-                });
-
-            modelBuilder.Entity("SalesWebMvc.Models.Seller", b =>
-                {
-                    b.Navigation("Sales");
-                });
+            {
+                b.HasOne("SalesWebMvc.Models.Department", "Department")
+                    .WithMany("Sellers")
+                    .HasForeignKey("DepartmentId");
+            });
 #pragma warning restore 612, 618
         }
     }

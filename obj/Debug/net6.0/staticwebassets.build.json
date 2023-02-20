@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vShKtNyk2xrZMrQmX51jDMVbVzdqp1DtsY8UCkwXrR8=",
+  "Hash": "IM3dhJ1dpZy+QejYXQceQFVwINUFiF2Ksp/ug9PQ2VQ=",
   "Source": "SalesWebMvc",
   "BasePath": "_content/SalesWebMvc",
   "Mode": "Default",
@@ -66,23 +66,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "C:\\Users\\HeK\\Documents\\udemy\\c# Completo\\projects\\SalesWebMvc\\SalesWebMvc\\wwwroot\\css\\site1.css",
-      "SourceId": "SalesWebMvc",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\HeK\\Documents\\udemy\\c# Completo\\projects\\SalesWebMvc\\SalesWebMvc\\wwwroot\\",
-      "BasePath": "_content/SalesWebMvc",
-      "RelativePath": "css/site1.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\site1.css"
     },
     {
       "Identity": "C:\\Users\\HeK\\Documents\\udemy\\c# Completo\\projects\\SalesWebMvc\\SalesWebMvc\\wwwroot\\favicon.ico",

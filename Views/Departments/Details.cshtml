@@ -18,8 +18,18 @@
         </dd>
     </dl>
 </div>
-<div>
-    <a class="oliva" asp-action="Index">Back to List</a>
-    |
-    <a class="oliva" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>     
+<div class="d-flex d-inline-flex justify-content-center align-items-center gap-2">    
+    <a asp-action="Index" class="btn btn-primary mt-2 oliva rounded-pill d-flex justify-content-center align-items-center btpadding">                                               
+                 <div class="d-flex d-inline-flex align-self-center h-22">
+                 <i class="gg-push-chevron-left-o"></i>
+                 <p class="ms-2 h6">Back to List</p>
+                 </div>
+                </a>    
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary mt-2 oliva rounded-pill d-flex justify-content-center align-items-center btpadding">                                               
+                 <div class="d-flex d-inline-flex align-self-center h-22 gap-2">
+                 <i class="gg-pen mt-2"></i>
+                 <p class="ms-2 h6">Edit</p>
+                 </div>
+                </a>  
+         
 </div>

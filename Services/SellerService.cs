@@ -1,19 +1,26 @@
 ﻿using SalesWebMvc.Models;
 
+
 namespace SalesWebMvc.Services
 {
     public class SellerService
     {
-        private readonly SalesWebMvcContext _contex;
+        private readonly SalesWebMvcContext _context;
 
-        public SellerService(SalesWebMvcContext contex)
+        public SellerService(SalesWebMvcContext context)
         {
-            _contex = contex;
+            _context = context;
         }
 
-        public List<Seller> FinAll()
+        public List<Seller> FindAll()
         {
-            return _contex.Seller.ToList();
+            return _context.Seller.ToList();
+        }
+
+        public void Insert(Seller obj)
+        {
+            _context.Add(obj);
+            _context.SaveChanges();
         }
     }
 }
