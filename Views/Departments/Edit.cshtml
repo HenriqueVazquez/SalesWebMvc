@@ -1,4 +1,7 @@
-﻿@model SalesWebMvc.Models.Department
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, SalesWebMvc
+
+@model SalesWebMvc.Models.Department
 
 @{
     ViewData["Title"] = "Edit";
@@ -24,13 +27,8 @@
                  <i class="gg-push-chevron-left-o"></i>
                  <p class="ms-2 h6">Back to List</p>
                  </div>
-                </button>    
-                <button type="submit" class="btn btn-primary mt-2 oliva rounded-pill d-flex justify-content-center align-items-center btpadding">                                               
-                 <div class="d-flex d-inline-flex align-self-center h-22">
-                 <i class="gg-chevron-double-down-o"></i>
-                 <p class="ms-2 h6">Save</p>
-                 </div>
-                </button>        
+                </button>                    
+                <button-return-action icon-class="gg-chevron-double-down-o" text="Save" class="oliva"></button-return-action>
                 </div>
             </div>
         </form>

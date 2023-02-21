@@ -1,4 +1,7 @@
-﻿@model SalesWebMvc.Models.Department
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, SalesWebMvc
+
+@model SalesWebMvc.Models.Department
 
 @{
     ViewData["Title"] = "Delete";
@@ -28,12 +31,8 @@
                  <p class="ms-2 h6">Back to List</p>
                  </div>
                 </button>                   
-                <button type="submit" class="btn btn-danger delete btn btn-primary mt-2 rounded-pill d-flex justify-content-center align-items-center btpadding">                                               
-                 <div class="d-flex d-inline-flex align-self-center h-22">
-                <i class="gg-erase"></i>
-                 <p class="ms-2 h6">Delete</p>
-                 </div>
-                </button>        
+               
+                <button-return-action icon-class="gg-erase" text="Delete" class="delete btn-danger btpadding"></button-return-action>
                 </div>
 
     </form>

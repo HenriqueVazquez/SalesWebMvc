@@ -23,8 +23,8 @@ internal class Program
         builder.Services.AddScoped<SeedingService>();
         builder.Services.AddScoped<SellerService>();
         builder.Services.AddScoped<DepartmentService>();
-        
-        var app = builder.Build();      
+
+        var app = builder.Build();
 
 
         // Configure the HTTP request pipeline.
@@ -53,7 +53,7 @@ internal class Program
         app.UseRouting();
 
         app.UseAuthorization();
-       
+
 
         app.MapControllerRoute(
             name: "default",

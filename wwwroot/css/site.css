@@ -12595,6 +12595,73 @@ body {
                 color: #fff;
             }
 
-.footer {
-    padding: 5rem 0;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+main {
+    margin-top: 50px; /* altura do cabeçalho */
+    margin-bottom: 50px; /* altura do rodapé */
+    overflow-y: auto;
+    overflow-x: hidden
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+body {
+    padding-bottom: 60px;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    min-height: calc(100vh - 120px);
+    padding-top: 60px;
+    max-width: auto;
+}
+
+
+.button-container,
+.a-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .button-container button,
+    .a-button-container a {
+        font-size: 1.2rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .button-container i,
+    .a-button-container i {
+        font-size: 1.2rem;
+    }
+
+@media screen and (max-width: 768px) {
+    .button-container button,
+    .a-button-container a {
+        font-size: 0.8em;
+        padding: 0.5em 1em;
+    }
+
+    .button-container i,
+    .a-button-container i {
+        font-size: 1em;
+    }
+
+    .a-button-container button {
+        min-width: 80px;
+        font-size: 0.8em;
+    }
 }

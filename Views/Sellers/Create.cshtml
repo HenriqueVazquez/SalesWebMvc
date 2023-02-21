@@ -1,12 +1,13 @@
-﻿@model SalesWebMvc.Models.ViewModels.SellerFormViewModel
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, SalesWebMvc
+
+@model SalesWebMvc.Models.ViewModels.SellerFormViewModel
 
 @{
     ViewData["Title"] = "Create Seller";
 }
 
-
 <h2>@ViewData["Title"]</h2>
-
 
 <hr />
 <div class="row">
@@ -18,48 +19,41 @@
                 <input asp-for="Seller.Name" class="form-control" />
                 <span asp-validation-for="Seller.Name" class="text-danger"></span>
             </div>
-             <div class="form-group">
+            <div class="form-group">
                 <label asp-for="Seller.Email" class="control-label"></label>
                 <input asp-for="Seller.Email" class="form-control" />
                 <span asp-validation-for="Seller.Email" class="text-danger"></span>
             </div>
-             <div class="form-group">
+            <div class="form-group">
                 <label asp-for="Seller.BirthDate" class="control-label"></label>
                 <input asp-for="Seller.BirthDate" class="form-control" />
                 <span asp-validation-for="Seller.BirthDate" class="text-danger"></span>
             </div>
-             <div class="form-group">
+            <div class="form-group">
                 <label asp-for="Seller.BaseSalary" class="control-label"></label>
                 <input asp-for="Seller.BaseSalary" class="form-control" />
                 <span asp-validation-for="Seller.BaseSalary" class="text-danger"></span>
-            </div>         
-            <div class="form-group">
-                <label asp-for="Seller.DepartmentId" class="control-label"></label>
-            <select asp-for="Seller.DepartmentId" asp-items="@(new SelectList(Model.Departments,"Id", "Name"))" class="form-select"></select>
             </div>
 
             <div class="form-group">
-                 <div class="d-flex d-inline-flex justify-content-center align-items-center gap-2">
-                  <a asp-action="Index" class="btn btn-primary mt-2 oliva rounded-pill d-flex justify-content-center align-items-center btpadding">                                               
-                 <div class="d-flex d-inline-flex align-self-center h-22">
-                 <i class="gg-push-chevron-left-o"></i>
-                 <p class="ms-2 h6">Back to List</p>
-                 </div>
-                </a>                   
-                <button type="submit" class="btn btn-primary mt-2 oliva rounded-pill d-flex justify-content-center align-items-center btpadding">                                               
-                 <div class="d-flex d-inline-flex align-self-center h-22">
-                 <i class="gg-chevron-double-down-o"></i>
-                 <p class="ms-2 h6">Create</p>
-                 </div>
-                </button>        
+                <label asp-for="Seller.DepartmentId" class="control-label"></label>
+                <select asp-for="Seller.DepartmentId" asp-items="@(new SelectList(Model.Departments,"Id", "Name"))" class="form-select"></select>
+            </div>
+
+            <div class="form-group">
+                <div class="d-flex d-inline-flex justify-content-center align-items-center gap-2">
+                    <a asp-action="Index" class="btn btn-primary mt-2 oliva rounded-pill d-flex justify-content-center align-items-center btpadding">
+                        <div class="d-flex d-inline-flex align-self-center h-22">
+                            <i class="gg-push-chevron-left-o"></i>
+                            <p class="ms-2 h6">Back to List</p>
+                        </div>
+                    </a>
+                    <button-return-action icon-class="gg-chevron-double-down-o" text="Create" class="oliva"></button-return-action>
                 </div>
             </div>
         </form>
     </div>
 </div>
-
-
-
 
 @section Scripts {
     @{
