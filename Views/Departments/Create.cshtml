@@ -23,13 +23,10 @@
             </div>
             <div class="form-group">
                  <div class="d-flex d-inline-flex justify-content-center align-items-center gap-2">
-                  <a asp-action="Index" class="btn btn-primary mt-2 oliva rounded-pill d-flex justify-content-center align-items-center btpadding">                                               
-                 <div class="d-flex d-inline-flex align-self-center h-22">
-                 <i class="gg-push-chevron-left-o"></i>
-                 <p class="ms-2 h6">Back to List</p>
-                 </div>
-                </a>               
-                <button-return-action icon-class="gg-chevron-double-down-o" text="Create" class="oliva"></button-return-action>
+                  
+                <button-a route="/Departments/Index" icon-class="gg-push-chevron-left-o" text="Back to List" class="oliva"></button-a>
+
+                <button-action icon-class="gg-chevron-double-down-o" text="Create" class="oliva"></button-action>
                 </div>
             </div>
         </form>

@@ -1,15 +1,10 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
 
-
-
-
 namespace System
 {
-    [HtmlTargetElement("button-return-action")]
-    public class ButtonReturnActionTagHelper : TagHelper
+    [HtmlTargetElement("button-action")]
+    public class ButtonActionTagHelper : TagHelper
     {
-
-
         public string IconClass { get; set; }
         public string Text { get; set; }
         public string Class { get; set; }

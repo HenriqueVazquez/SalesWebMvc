@@ -1,0 +1,49 @@
+﻿@model SalesWebMvc.Models.Seller
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, SalesWebMvc
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+
+<div>
+    <h4>Seller</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.BaseSalary)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.BaseSalary)
+        </dd>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" /> 
+         <div class="d-flex d-inline-flex justify-content-center align-items-center gap-2">
+             <button-a route="/Sellers/Index" icon-class="gg-push-chevron-left-o" text="Back to List" class="oliva"></button-a>
+             <button-action icon-class="gg-erase" text="Delete" class="delete btn-danger btpadding"></button-action>
+        </div>
+    </form>
+</div>

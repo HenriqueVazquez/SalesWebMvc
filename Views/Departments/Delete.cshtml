@@ -25,15 +25,8 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <div class="d-flex d-inline-flex justify-content-center align-items-center gap-2">
-                 <button asp-action="Index" class="btn btn-primary mt-2 oliva rounded-pill d-flex justify-content-center align-items-center btpadding">                                               
-                 <div class="d-flex d-inline-flex align-self-center h-22">
-                 <i class="gg-push-chevron-left-o"></i>
-                 <p class="ms-2 h6">Back to List</p>
-                 </div>
-                </button>                   
-               
-                <button-return-action icon-class="gg-erase" text="Delete" class="delete btn-danger btpadding"></button-return-action>
-                </div>
-
+             <button-a route="/Departments/Index" icon-class="gg-push-chevron-left-o" text="Back to List" class="oliva"></button-a>
+             <button-action icon-class="gg-erase" text="Delete" class="delete btn-danger btpadding"></button-action>
+        </div>
     </form>
 </div>
