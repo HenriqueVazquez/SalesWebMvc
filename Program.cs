@@ -2,6 +2,8 @@
 using SalesWebMvc.Data;
 using SalesWebMvc.Models;
 using SalesWebMvc.Services;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 
 internal class Program
 {
@@ -58,6 +60,18 @@ internal class Program
         app.MapControllerRoute(
             name: "default",
             pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+        var enUs = new CultureInfo("en-US");
+        var localizationOptions = (new RequestLocalizationOptions
+        {
+            DefaultRequestCulture = new RequestCulture(enUs),
+            SupportedCultures = new List<CultureInfo> { enUs },
+            SupportedUICultures = new List<CultureInfo> { enUs }
+        });
+
+        app.UseRequestLocalization(localizationOptions);
+
 
         app.Run();
     }
