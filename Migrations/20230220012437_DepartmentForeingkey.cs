@@ -98,7 +98,7 @@ namespace SalesWebMvc.Migrations
                 column: "SellerId",
                 principalTable: "Seller",
                 principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Seller_Department_DepartmentId",
