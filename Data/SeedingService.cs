@@ -53,20 +53,20 @@ namespace SalesWebMvc.Data
             SalesRecord r14 = new SalesRecord(14, new DateTime(2023, 01, 4), 3000.0, SaleStatus.Billed, s5);
             SalesRecord r15 = new SalesRecord(15, new DateTime(2023, 01, 12), 4000.0, SaleStatus.Billed, s1);
             SalesRecord r16 = new SalesRecord(16, new DateTime(2023, 01, 5), 2000.0, SaleStatus.Billed, s4);
-            SalesRecord r17 = new SalesRecord(17, new DateTime(2023, 01, 1), 12000.0, SaleStatus.Billed, s1);
+            SalesRecord r17 = new SalesRecord(17, new DateTime(2023, 02, 1), 12000.0, SaleStatus.Billed, s1);
             SalesRecord r18 = new SalesRecord(18, new DateTime(2023, 01, 24), 6000.0, SaleStatus.Billed, s3);
             SalesRecord r19 = new SalesRecord(19, new DateTime(2023, 01, 22), 8000.0, SaleStatus.Billed, s5);
             SalesRecord r20 = new SalesRecord(20, new DateTime(2023, 01, 15), 8000.0, SaleStatus.Billed, s6);
             SalesRecord r21 = new SalesRecord(21, new DateTime(2023, 01, 17), 9000.0, SaleStatus.Billed, s2);
             SalesRecord r22 = new SalesRecord(22, new DateTime(2023, 01, 24), 4000.0, SaleStatus.Billed, s4);
             SalesRecord r23 = new SalesRecord(23, new DateTime(2023, 01, 19), 11000.0, SaleStatus.Canceled, s2);
-            SalesRecord r24 = new SalesRecord(24, new DateTime(2023, 01, 12), 8000.0, SaleStatus.Billed, s5);
+            SalesRecord r24 = new SalesRecord(24, new DateTime(2023, 02, 12), 8000.0, SaleStatus.Billed, s5);
             SalesRecord r25 = new SalesRecord(25, new DateTime(2023, 01, 31), 7000.0, SaleStatus.Billed, s3);
             SalesRecord r26 = new SalesRecord(26, new DateTime(2023, 01, 6), 5000.0, SaleStatus.Billed, s4);
             SalesRecord r27 = new SalesRecord(27, new DateTime(2023, 01, 13), 9000.0, SaleStatus.Pending, s1);
             SalesRecord r28 = new SalesRecord(28, new DateTime(2023, 01, 7), 4000.0, SaleStatus.Billed, s3);
             SalesRecord r29 = new SalesRecord(29, new DateTime(2023, 01, 23), 12000.0, SaleStatus.Billed, s5);
-            SalesRecord r30 = new SalesRecord(30, new DateTime(2023, 01, 12), 5000.0, SaleStatus.Billed, s2);
+            SalesRecord r30 = new SalesRecord(30, new DateTime(2023, 02, 12), 5000.0, SaleStatus.Billed, s2);
 
             _context.Department.AddRange(d1, d2, d3, d4);
 
